@@ -53,13 +53,26 @@ export default function Home() {
 
 
       {/* Dekorasi kiri tengah (kuning) */}
-      <Image
-        src="/images/decor-yw.svg"
-        alt="Description"
-        width={400}
-        height={400}
+      <motion.div
         className="absolute bottom-1/2 left-0 translate-y-full"
-      />
+        animate = {{
+          opacity: [60, 5, 100],
+          y: [25, -30, 25],
+          transition: {
+            duration: 3,
+            times: [0, 0.5, 1],
+            repeat: Infinity,
+            ease: easeInOut
+          }
+        }}
+      >
+        <Image
+          src="/images/decor-yw.svg"
+          alt="Description"
+          width={400}
+          height={400}
+        />
+      </motion.div>
 
       {/* Bagian konten kedua */}
 
