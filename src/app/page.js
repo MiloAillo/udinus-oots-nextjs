@@ -1,6 +1,6 @@
 "use client"
 
-import { Footer, Section1, Section2, Section3, SocialIcon } from '@/components/ui'
+import { Footer, Section1, Section2, Section3, SocialIcon, Section4 } from '@/components/ui'
 import Image from 'next/image'
 import { easeInOut, motion } from 'motion/react'
 
@@ -74,6 +74,8 @@ export default function Home() {
 
       {/* Bagian konten ketiga */}
       <Section3 />
+
+      <Section4 />
 
       {/* Footer halaman */}
       <Footer />
