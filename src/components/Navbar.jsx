@@ -2,6 +2,8 @@
 
 import { easeIn, easeInOut, easeOut, motion } from 'motion/react'
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 export default function Navbar() {
   return (
@@ -24,13 +26,11 @@ export default function Navbar() {
       </div>
 
       <div className="flex w-1/6 justify-end gap-2">
-        <div className="cursor-pointer rounded-full p-2 transition-all duration-300 hover:scale-120 hover:bg-gray-400/50">
-          <Image src="/images/instagram.svg" width={30} height={30} alt="instagram logo" />
-        </div>
-
-        <div className="cursor-pointer rounded-full p-2 transition-all duration-300 hover:scale-120 hover:bg-gray-400/50">
-          <Image src="/images/tiktok.svg" width={30} height={30} alt="tiktok logo" />
-        </div>
+        <a href="https://github.com/MiloAillo">
+          <div className="cursor-pointer rounded-full p-2 transition-all duration-300 hover:scale-120 hover:bg-gray-400/50">
+            <FontAwesomeIcon icon={faGithub} size='2x' />
+          </div>
+        </a>
       </div>
     </nav>
   )
