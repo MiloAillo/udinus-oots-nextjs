@@ -38,7 +38,7 @@ export default function Section4() {
                     y: [40, -10, 0],
                     transition: {
                     duration: 0.9,
-                    delay: 0.1,
+                    delay: 0.3,
                     ease: easeOut
                     }
                 }}            
