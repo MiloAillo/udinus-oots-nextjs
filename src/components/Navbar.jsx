@@ -4,6 +4,7 @@ import { easeIn, easeInOut, easeOut, motion } from 'motion/react'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faHouse } from "@fortawesome/free-solid-svg-icons"
 
 export default function Navbar() {
   return (
@@ -31,6 +32,12 @@ export default function Navbar() {
             <FontAwesomeIcon icon={faGithub} size='2x' />
           </div>
         </a>
+
+          <a href="https://mischikomoe.web.id">
+            <div className="cursor-pointer rounded-full p-2 transition-all duration-300 hover:scale-120 hover:bg-gray-400/50">
+              <FontAwesomeIcon icon={faHouse} size='2x' />
+            </div>
+          </a>
       </div>
     </nav>
   )
