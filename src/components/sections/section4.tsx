@@ -1,17 +1,48 @@
 import { useState } from "react"
 import { Button } from "../ui/button"
 import Image from "next/image"
+import { easeOut, motion } from "motion/react"
 
 export default function Section4() {
     const [category, setCategory] = useState<"lang" | "framework" | "tools" | "db">("lang")
 
     return (
         <section className="flex flex-col gap-10 mb-10">
-            <div className={`gap-5 w-full h-fit justify-center items-center flex`}>
-                <Button className="bg-neutral-200 text-neutral-800 hover:text-neutral-200" onClick={() => setCategory("lang")}>Languages</Button>
-                <Button className="bg-neutral-200 text-neutral-800 hover:text-neutral-200" onClick={() => setCategory("framework")}>Libraries & Frameworsk</Button>
-            </div>
-            <div className={`gap-5 flex-wrap justify-center ${category === "lang" ? "flex" : "hidden"}`}>
+            <motion.div 
+                className={`gap-5 w-full h-fit justify-center items-center flex`}
+                initial = {{
+                    opacity: 0
+                }}
+                whileInView={{
+                    opacity: [0, 100],
+                    filter: ["blur(5px)", "blur(0px)"],
+                    y: [40, -10, 0],
+                    transition: {
+                    duration: 0.9,
+                    delay: 0.1,
+                    ease: easeOut
+                    }
+                }}            
+            >
+                <Button className={` bg-neutral-200 text-neutral-800 hover:text-neutral-200" ${category === "lang" ? "border-2 border-neutral-400" : ""}`} onClick={() => setCategory("lang")}>Languages</Button>
+                <Button className={`bg-neutral-200 text-neutral-800 hover:text-neutral-200  ${category === "framework" ? "border-2 border-neutral-400" : ""}`} onClick={() => setCategory("framework")}>Libraries & Frameworsk</Button>
+            </motion.div>
+            <motion.div 
+                className={`gap-5 flex-wrap justify-center ${category === "lang" ? "flex" : "hidden"}`}
+                initial = {{
+                    opacity: 0
+                }}
+                whileInView={{
+                    opacity: [0, 100],
+                    filter: ["blur(5px)", "blur(0px)"],
+                    y: [40, -10, 0],
+                    transition: {
+                    duration: 0.9,
+                    delay: 0.1,
+                    ease: easeOut
+                    }
+                }}            
+            >
                 <div className="flex flex-row gap-5 justify-center items-center w-100">
                     <div className="bg-neutral-100 p-3 w-fit h-fit rounded-xl">
                         <div style={{background: "url(/images/javascript.png)", backgroundSize: "contain"}} className="w-20 h-20" />
@@ -39,9 +70,24 @@ export default function Section4() {
                         <p>A language i had to learn to use Laravel</p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className={`gap-5 flex-wrap justify-center ${category === "framework" ? "flex" : "hidden"}`}>
+            <motion.div 
+                className={`gap-5 flex-wrap justify-center ${category === "framework" ? "flex" : "hidden"}`}
+                initial = {{
+                    opacity: 0
+                }}
+                whileInView={{
+                    opacity: [0, 100],
+                    filter: ["blur(5px)", "blur(0px)"],
+                    y: [40, -10, 0],
+                    transition: {
+                    duration: 0.9,
+                    delay: 0.1,
+                    ease: easeOut
+                    }
+                }}            
+            >
                 <div className="flex flex-row gap-5 justify-center items-center w-100">
                     <div className="bg-neutral-100 p-3 w-fit h-fit rounded-xl flex justify-center items-center">
                         <div style={{background: "url(/images/react.png)", backgroundPosition: "center", backgroundSize: "contain", backgroundRepeat: "no-repeat"}} className="w-20 h-20" />
@@ -87,7 +133,7 @@ export default function Section4() {
                         <p>No separate CSS files anymore yay</p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
         </section>
     )

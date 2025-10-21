@@ -79,7 +79,7 @@ export default function Section1() {
     //     </div>
     //   </div>
     // </section>
-    <section className="flex min-h-[100vh] items-center justify-center">
+    <section className="flex min-h-[60vh] mb-20 items-center justify-center">
       <div className="relative flex flex-row gap-[50px] items-center mx-[25px]">
         {/* Card / content1 */}
         <motion.div 

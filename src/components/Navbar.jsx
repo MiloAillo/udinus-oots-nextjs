@@ -23,18 +23,6 @@ export default function Navbar() {
         >_</motion.div>
       </div>
 
-      <div className="flex w-4/6 justify-center gap-5 text-lg font-bold">
-        {['Home', 'About', 'Stacks'].map((item) => (
-          <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
-            className="relative flex cursor-pointer items-center after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 after:content-[''] hover:after:w-full"
-          >
-            {item}
-          </a>
-        ))}
-      </div>
-
       <div className="flex w-1/6 justify-end gap-2">
         <div className="cursor-pointer rounded-full p-2 transition-all duration-300 hover:scale-120 hover:bg-gray-400/50">
           <Image src="/images/instagram.svg" width={30} height={30} alt="instagram logo" />

@@ -4,7 +4,7 @@ import { easeInOut, motion } from "motion/react"
 
 export default function Section2() {
   return (
-    <section id="about" className="min-h-[100vh] flex justify-center items-center flex-col">
+    <section id="about" className="min-h-[60vh] flex justify-center items-center flex-col">
       {/* text about */}
       <div className="mb-12 flex flex-col gap-2">
         <motion.p 

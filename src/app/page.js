@@ -6,7 +6,9 @@ import { easeInOut, motion } from 'motion/react'
 
 export default function Home() {
   return (
-    <main className="relative">
+    <motion.main className="relative"
+      layout
+    >
       {/* Dekorasi atas kiri */}
       <motion.div
         className="absolute"
@@ -21,7 +23,6 @@ export default function Home() {
           }
         }}
       >
-        <Image src="/images/decor-bp.svg" alt="Description" width={400} height={400} />
       </motion.div>
 
       {/* Bagian konten pertama */}
@@ -61,16 +62,8 @@ export default function Home() {
       />
 
       {/* Bagian konten kedua */}
-      <Section2 />
 
       {/* Dekorasi kanan bawah (biru/purple) */}
-      <Image
-        src="/images/decor-bp.svg"
-        alt="Description"
-        width={400}
-        height={400}
-        className="absolute right-0 bottom-0 -translate-y-1/2"
-      />
 
       {/* Bagian konten ketiga */}
 
@@ -78,6 +71,6 @@ export default function Home() {
 
       {/* Footer halaman */}
       <Footer />
-    </main>
+    </motion.main>
   )
 }
