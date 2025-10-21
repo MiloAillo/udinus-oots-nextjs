@@ -73,7 +73,6 @@ export default function Home() {
       />
 
       {/* Bagian konten ketiga */}
-      <Section3 />
 
       <Section4 />
 
