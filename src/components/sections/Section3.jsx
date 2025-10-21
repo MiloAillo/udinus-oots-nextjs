@@ -5,7 +5,7 @@ import { SocialIcon } from '../ui'
 
 export default function Section3() {
   return (
-    <section id="stacks" className="mb-32 flex w-full justify-center">
+    <section id="stacks" className="mb-32 min-h-[100vh] flex w-full justify-center items-center">
       {/* Card utama dengan efek glassmorphism (transparan, blur, dan bayangan halus) */}
       <motion.div 
         className="flex flex-col gap-5 rounded-xl border border-white/20 bg-white/20 p-10 shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-white/30 hover:shadow-xl"

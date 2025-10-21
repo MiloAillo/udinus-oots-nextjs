@@ -4,7 +4,7 @@ import { easeInOut, motion } from "motion/react"
 
 export default function Section2() {
   return (
-    <section id="about" className="min-h-[70vh]">
+    <section id="about" className="min-h-[100vh] flex justify-center items-center flex-col">
       {/* text about */}
       <div className="mb-12 flex flex-col gap-2">
         <motion.p 
@@ -18,7 +18,6 @@ export default function Section2() {
             y: [30, -10, 0],
             transition: {
               duration: 0.9,
-              delay: 0.1,
               ease: easeInOut
             }
           }}
@@ -36,7 +35,7 @@ export default function Section2() {
             y: [30, -10, 0],
             transition: {
               duration: 0.9,
-              delay: 0.3,
+              delay: 0.1,
               ease: easeInOut
             }
           }}
@@ -59,7 +58,7 @@ export default function Section2() {
           y: [30, -10, 0],
           transition: {
             duration: 0.9,
-            delay: 0.6,
+            delay: 0.3,
             ease: easeInOut
           }
         }}
