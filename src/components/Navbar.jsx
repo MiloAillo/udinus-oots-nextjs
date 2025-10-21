@@ -1,26 +1,26 @@
 "use client"
 
-import { easeInOut, motion } from 'motion/react'
+import { easeIn, easeInOut, easeOut, motion } from 'motion/react'
 import Image from 'next/image'
 
 export default function Navbar() {
   return (
     // <nav className="font-poppins sticky flex justify-between px-5 py-7">
     <nav className="font-poppins sticky top-0 z-50 flex justify-between bg-white/10 px-5 py-3 backdrop-blur">
-      <div className="w-1/6">
-        <p className="cursor-default text-2xl font-bold">mischiko</p>
-        <motion.p 
-          className="cursor-default text-2xl font-bold"
+      <div className="w-1/6 flex flex-row">
+        <p className="cursor-default text-2xl font-bold"> {">"} mischiko</p>
+        <motion.div
+          className="cursor-default text-2xl font.ex"
           animate={{
-            opacity: [0, 50, 100],
+            opacity: [0, 100, 0],
             transition: {
-              duration: 3,
+              duration: 1,
               times: [0, 0.5, 1],
               repeat: Infinity,
-              ease: easeInOut
+              repeatDelay: 0.4
             }
           }}
-        >_</motion.p>
+        >_</motion.div>
       </div>
 
       <div className="flex w-4/6 justify-center gap-5 text-lg font-bold">
